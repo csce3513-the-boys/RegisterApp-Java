@@ -6,3 +6,4 @@ function validateForm() {
 	// TODO: Validate the user input
 	return true;
 }
+//Looked into resourse link and file

@@ -11,20 +11,20 @@ function startTransaction()
 
 function viewProducts()
 {
-    alert("Functionality has not been implemented");
+    alert("View product");
 }
 
 function createEmployee()
 {
-    alert("Functionality has not been implemented");
+    alert("Create Employee");
 }
 
 function salesReport()
 {
-    alert("Functionality has not been implemented");
+    alert("Sales Report");
 }
 
 function cashierReport()
 {
-    alert("Functionality has not been implemented");
+    alert("Cashier Report");
 }

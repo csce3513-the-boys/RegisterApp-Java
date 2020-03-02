@@ -1,7 +1,11 @@
-<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"></html>
 <html>
+    <head>
+        <title>Employee Detail</title>
+    </head>
     <body>
-        Employee Detail<br>
+        <p id="signOut"></p><img src="baseline_input_black_18dp.png" alt="Sign Out"></p>
+        <h1>Employee Detail</h1>
         <form>
             <imput type="hidden" id="recordID" name="recordID"><br>
             <label for="employeeID">Employee ID: </label><br>
@@ -20,8 +24,12 @@
             <input type="radio" id="shiftManager" name="employeeType">
             <label for="Shift Manager"> Shift Manager</label><br>
             <input type="radio" id="generalManager" name="employeeType">
-            <label for="generalManager"> General Manager</label><br>
+            <label for="generalManager"> General Manager</label><br><br>    
             <input type="submit" value="Submit">
         </form>
     </body>
 </html>
+
+<script>
+    document.getElementById("signOut").onclick = function() {signOut()};
+</script>

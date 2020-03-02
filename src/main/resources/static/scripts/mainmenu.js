@@ -6,25 +6,25 @@ document.getElementById("button5").addEventListener("click", cashierReport);
 
 function startTransaction()
 {
-    alert("Functionality has not been implemented");
+    displayError("Functionality has not been implemented");
 }
 
 function viewProducts()
 {
-    location.replace("");
+    window.location = "productListing.html";
 }
 
 function createEmployee()
 {
-    location.replace("employeeDetail.html");
+    window.location = "employeeDetail.html";
 }
 
 function salesReport()
 {
-    alert("Functionality has not been implemented");
+    displayError("Functionality has not been implemented");
 }
 
 function cashierReport()
 {
-    alert("Functionality has not been implemented");
+    displayError("Functionality has not been implemented");
 }

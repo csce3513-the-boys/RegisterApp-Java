@@ -11,20 +11,20 @@ function startTransaction()
 
 function viewProducts()
 {
-    alert("View product");
+    location.replace("");
 }
 
 function createEmployee()
 {
-    alert("Create Employee");
+    location.replace("employeeDetail.html");
 }
 
 function salesReport()
 {
-    alert("Sales Report");
+    alert("Functionality has not been implemented");
 }
 
 function cashierReport()
 {
-    alert("Cashier Report");
+    alert("Functionality has not been implemented");
 }

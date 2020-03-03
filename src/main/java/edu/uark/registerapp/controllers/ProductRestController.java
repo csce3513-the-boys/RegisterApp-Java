@@ -52,6 +52,15 @@ public class ProductRestController extends BaseRestController {
 	) {
 
 		// TODO: Verify that the user associated with the current session is elevated
+		final ApiResponse elevatedUserResponse =
+			this.redirectUserNotElevated(
+				request,
+				response,
+				ViewNames.PRODUCT_LISTING.getRoute());
+
+		if (!elevatedUserResponse.getRedirectUrl().equals(StringUtils.EMPTY)) {
+			return elevatedUserResponse;
+		}
 
 		return this.productUpdateCommand
 			.setProductId(productId)
@@ -65,6 +74,15 @@ public class ProductRestController extends BaseRestController {
 	) {
 
 		// TODO: Verify that the user associated with the current session is elevated
+		final ApiResponse elevatedUserResponse =
+			this.redirectUserNotElevated(
+				request,
+				response,
+				ViewNames.PRODUCT_LISTING.getRoute());
+
+		if (!elevatedUserResponse.getRedirectUrl().equals(StringUtils.EMPTY)) {
+			return elevatedUserResponse;
+		}
 
 		this.productDeleteCommand
 			.setProductId(productId)
@@ -76,10 +94,10 @@ public class ProductRestController extends BaseRestController {
 	// Properties
 	@Autowired
 	private ProductCreateCommand productCreateCommand;
-	
+
 	@Autowired
 	private ProductDeleteCommand productDeleteCommand;
-	
+
 	@Autowired
 	private ProductUpdateCommand productUpdateCommand;
 }

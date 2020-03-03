@@ -42,12 +42,55 @@
 							<input id="employeeEmployeeId" type="text" th:value="${!employee.isEmpty} ? ${employee.employeeId} : ''" class="update" disabled />
 						</td>
 					</tr>
-					<!-- TODO: Other employee inputs -->
+					<tr>
+						<td>First Name: </td>
+						<td>
+							<input id="firstName" type="text" th:value="${!employee.isEmpty} ? ${employee.managerId} : ''" />
+						</td>
+					</tr>
+					<tr>
+						<td>Last Name: </td>
+						<td>
+							<input id="lastName" type="text" th:value="${!employee.isEmpty} ? ${employee.managerId} : ''" />
+						</td>
+					</tr>
+					<tr>
+						<td>Password: </td>
+						<td>
+							<input id="password" type="text" th:value="${!employee.isEmpty} ? ${employee.managerId} : ''" />
+						</td>
+					</tr>
+					<tr>
+						<td>Confirm Password: </td>
+						<td>
+							<input id="confirmPassword" type="text" th:value="${!employee.isEmpty} ? ${employee.managerId} : ''" />
+						</td>
+					</tr>
+					<td></td>
+					<tr><td>Employee Type: </td></tr>
+					<tr>
+						<td>Cashier: </td>
+						<td>
+							<input id="cashier" type="radio" name= "employeeType" th:value="${!employee.isEmpty} ? ${employee.managerId} : ''" />
+						</td>
+					</tr>
+					<tr>
+						<td>Shift Manager: </td>
+						<td>
+							<input id="shiftManager" type="radio" name="employeeType" th:value="${!employee.isEmpty} ? ${employee.managerId} : ''" />
+						</td>
+					</tr>
+					<tr>
+						<td>General Manager: </td>
+						<td>
+							<input id="generalManager" type="radio" name="employeeType" th:value="${!employee.isEmpty} ? ${employee.managerId} : ''" />
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
 
-		<!-- TODO: An action element to initiate a save -->
+		<br><button type="button">Save</button>
 
 		<div id="employeeSavedAlertModal" class="modal animate-opacity-show">
 			<div class="modal-content">
@@ -62,7 +105,7 @@
 	</div>
 
 	<div class="footer" th:classappend="${employee.isInitialEmployee} ? hidden : ''">
-		<img id="signOutImage" src="/images/Sign-Out.png" alt="Sign Out" class="footer" />
+		<img id="signOutImage" src="images\Sign-Out.png" alt="Sign Out" class="footer" />
 	</div>
 
 </body>

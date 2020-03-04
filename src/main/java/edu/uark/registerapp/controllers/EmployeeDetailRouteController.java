@@ -28,6 +28,7 @@ import edu.uark.registerapp.controllers.enums.QueryParameterNames;
 @RequestMapping(value = "/employeeDetail")
 public class EmployeeDetailRouteController extends BaseRouteController {
 	private Object employeeQuery;
+	private Object activeEmployeeExistsQuery;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView start(
@@ -75,7 +76,9 @@ public class EmployeeDetailRouteController extends BaseRouteController {
 		} else if (!this.isElevatedUser(activeUserEntity.get())) {
 			return this.buildNoPermissionsResponse();
 		} else {
-			Employee employee = this.employeeQuery.setRecordID(employeeId).execute();
+			Employee employee = ((Object) this.employeeQuery).setRecordID(employeeId).execute();
+
+			ModelAndView modelandview = new ModelAndView(ViewNames.EMPLOYEE_DETAIL.getViewName().addObject(ViewModelNames.EMPLOYEE.getValue(), employee));
 		}
 		
 

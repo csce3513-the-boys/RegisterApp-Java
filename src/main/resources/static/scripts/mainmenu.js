@@ -1,38 +1,35 @@
-document.getElementById("button1").addEventListener("click", startTransaction);
-document.getElementById("button2").addEventListener("click", viewProducts);
-document.getElementById("button3").addEventListener("click", createEmployee);
-document.getElementById("button4").addEventListener("click", salesReport);
-document.getElementById("button5").addEventListener("click", cashierReport);
-document.getElementById("signOut").addEventListener("click", signOut);
-
-var employeeRequest = newXMLHttpRequest();
-
-function startTransaction()
+window.addEventListener('DOMContentLoaded', () => 
 {
-    displayError("Functionality has not been implemented");
-}
 
-function viewProducts()
-{
-    window.location = "productListing.html";
-}
+    document.getElementById("start").addEventListener("click", 
+    function()
+    {
+        displayError("Functionality not implemented");
+    });
 
-function createEmployee()
-{
-    window.location = "employeeDetail.html";
-}
+    document.getElementById("view").addEventListener("click",
+    function()
+    {
+        window.location.replace("productListing.html");
+    });
 
-function salesReport()
-{
-    displayError("Functionality has not been implemented");
-}
+    document.getElementById("create").addEventListener("click",
+    function()
+    {
+        window.location.replace("employeeDetail.html")
+    });
 
-function cashierReport()
-{
-    displayError("Functionality has not been implemented");
-}
+    document.getElementById("sales").addEventListener("click", 
+    function()
+    {
+        displayError("Functionality not implemented");
+    });
 
-function signOut()
-{
-    employeeRequest.ajaxDelete();
-}
+    document.getElementById("cashier").addEventListener("click", 
+    function()
+    {
+        displayError("Functionality not implemented");
+    });
+
+    document.getElementById("signOut").addEventListener("click", signOutActionClickHandler());
+});

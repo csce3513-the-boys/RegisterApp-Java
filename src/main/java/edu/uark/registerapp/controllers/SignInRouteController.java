@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
-@RequestMapping(value = "/")
+@RequestMapping(value = "/signIn")
 public class SignInRouteController extends BaseRouteController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView start(@RequestParam Map<String,String> queryParams,  HttpServletRequest request) {
